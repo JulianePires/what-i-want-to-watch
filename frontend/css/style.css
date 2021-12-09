@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --background-dark: #212121;
+  --background-light: #2e2e2e;
+  --text: #ffffff;
+  --primary: #df352a;
+  --font-family: "Red Hat Text", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+
+  background: var(--background-dark);
+  font-family: var(--font-family);
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+  color: var(--text);
+  font-family: var(--font-family);
+  font-size: 1.1rem;
+  border: 2px solid var(--background-dark);
+  transition: filter 0.2s;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  filter: opacity(0.8);
+  transform: scale(0.9);
+}
+
+header {
+  width: 100%;
+  height: 30vh;
+
+  background: url("../assets/banner-desktop.png");
+  background-color: var(--primary);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main {
+  min-height: 65vh;
+  padding: 1.5rem;
+}
+
+.buttons {
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons button {
+  min-width: 6rem;
+  padding: 0.4rem;
+
+  border-radius: 4px;
+
+  background: var(--primary);
+}
+
+#cards {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.card {
+  height: 18.75rem;
+  width: 15.625rem;
+  background: linear-gradient(34.78deg, #484848 0%, rgba(72, 72, 72, 0) 100%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card div {
+  padding: 0.8rem 1rem;
+}
+
+.card-banner {
+  width: 100%;
+  height: 8.75rem;
+  background: #df352a;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.movie-gender {
+  font-size: 0.8rem;
+}
+
+.movie-director {
+  font-size: 0.8rem;
+}
+
+.hstack {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-height: 100%;
+}
+
+.movie-score {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.icons button {
+  width: 1.2rem;
+  background: none;
+  border: none;
+  margin: 0 0.5rem;
+}
+
+footer {
+  height: 5vh;
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--background-light);
+}
