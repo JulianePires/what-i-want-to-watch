@@ -1,5 +1,8 @@
 apiUrl = 'http://localhost:3000/movies';
 
+//TODO --> ADICIONAR VARIÁVEL QUE VERIFICA SE O FILME FOI ASSISTIDO
+//TODO --> CRIAR FUNÇÃO DE EDIÇÃO DE FILME
+//TODO --> CRIAR FUNÇÃO DE DELEÇÃO DE FILME
 
 const cardsSection = document.getElementById("cards");
 
