@@ -16,6 +16,13 @@ const updateMovie = async (movieId, movieNewInfo) => {
   return await Movie.updateOne({ _id: movieId }, movieNewInfo);
 };
 
+const updateWatchedStatus = async (movieId, watchedStatus) => {
+  return await Movie.findOneAndUpdate(
+    { _id: movieId },
+    { isWatched: watchedStatus }
+  );
+};
+
 const deleteMovie = async (movieId) => {
   return await Movie.remove({ _id: movieId });
 };
@@ -25,5 +32,6 @@ module.exports = {
   getMovieByIdService,
   registerMovie,
   updateMovie,
+  updateWatchedStatus,
   deleteMovie,
 };

@@ -22,9 +22,9 @@ const getMovieById = async (req, res) => {
       res.status(200).json(movies);
     })
     .catch((err) => {
-        res.status(404).send({
-            message: "Movie cannot be found",
-          });
+      res.status(404).send({
+        message: "Movie cannot be found",
+      });
     });
 };
 
@@ -51,7 +51,7 @@ const postMovie = async (req, res) => {
       res.status(200).send({ message: "Movie created successfully" });
     })
     .catch((err) => {
-      console.log(err);
+      res.send({ message: err.message });
     });
 };
 
@@ -79,7 +79,20 @@ const putMovie = async (req, res) => {
       res.status(200).send({ message: "Movie updated successfully" });
     })
     .catch((err) => {
-      console.log(err);
+      res.send({ message: err.message });
+    });
+};
+
+const modifyIsWatchStatus = async (req, res) => {
+  const { id } = req.params;
+  const { isWatched } = req.body;
+  await moviesService
+    .updateWatchedStatus(id, isWatched)
+    .then(() => {
+      res.status(200).send({ message: "Status updated successfully" });
+    })
+    .catch((err) => {
+      res.send({ message: err.message });
     });
 };
 
@@ -92,7 +105,7 @@ const deleteMovie = async (req, res) => {
       res.status(200).send({ message: "Movie deleted successfully" });
     })
     .catch((err) => {
-      console.log(err);
+      res.send({ message: err.message });
     });
 };
 
@@ -101,5 +114,6 @@ module.exports = {
   getMovieById,
   postMovie,
   putMovie,
+  modifyIsWatchStatus,
   deleteMovie,
 };

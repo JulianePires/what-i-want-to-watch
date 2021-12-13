@@ -11,6 +11,8 @@ router.post("/add", controller.postMovie);
 
 router.put("/edit/:id", controller.putMovie);
 
+router.patch("/watched/:id", controller.modifyIsWatchStatus);
+
 router.delete("/delete/:id", controller.deleteMovie);
 
 module.exports = router;
