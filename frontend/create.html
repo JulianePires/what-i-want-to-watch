@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/create.css">
+  <title>What I Want to Watch | Create</title>
+</head>
+
+<body>
+  <header>
+    <div class="banner"></div>
+  </header>
+  <main>
+    <section class="buttons">
+      <button><a  href="index.html">Back Home</a></button>
+    </section>
+    <section class="create-section">
+      <span class="hstack">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Movie name" required>
+      </span>
+
+      <span class="hstack">
+        <label for="image">Image:</label>
+        <input type="url" name="image" id="image" placeholder="Movie image url" required>
+      </span>
+
+      <span class="hstack">
+        <label for="score">Score:</label>
+        <input type="number" step=".01" name="score" id="score" placeholder="Movie score" required>
+      </span>
+
+      <span class="hstack">
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" id="gender" placeholder="Movie gender" required>
+      </span>
+
+      <span class="hstack">
+        <label for="director">Director:</label>
+        <input type="text" name="director" id="director" placeholder="Movie director" required>
+      </span>
+
+      <span class="hstack">
+        <label for="isWatched">Is watched?</label>
+        <input type="checkbox" name="isWatched" id="isWatched">
+      </span>
+
+      <button class="create-button" onclick="createMovies()">Create Movie</button>
+    </section>
+  </main>
+  <footer>
+    <p>Made by Juliane Pires</p>
+  </footer>
+  <script src="./js/create.js"></script>
+</body>
+
+</html>

@@ -24,7 +24,7 @@ const updateWatchedStatus = async (movieId, watchedStatus) => {
 };
 
 const deleteMovie = async (movieId) => {
-  return await Movie.remove({ _id: movieId });
+  return await Movie.deleteOne({ _id: movieId });
 };
 
 module.exports = {
